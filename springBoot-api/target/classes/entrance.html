@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能KPI 工厂V1.0</title>
+    <!-- ---------------添加开始 ------------------->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/commen_quality.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="favicon.ico">
+<!--    <link href="css/bootstrap.min.css?v=3.3.5" rel="stylesheet">-->
+<!--    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">-->
+    <link href="css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+<!--    <link href="css/style.css" rel="stylesheet">-->
+<!--    <base target="_blank">-->
+
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <!-- <script src="js/flexible.js"></script> -->
+    <script src="js/quality1.js"></script>
+    <script src="js/le/factory_equipment.js"></script>
+    <script src="js/boot_demo0802.js"></script>
+    <script src="js/zonglan.js"></script>
+    <script src="js/logistic_factory.js"></script>
+
+    <script src="js/persongcChart.js"></script>
+    <script src="js/qiyeKPI.js"></script>
+    <script src="js/toSupport.js"></script>
+
+    <!-- ---------------添加结束 ------------------->
+
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+            ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- normalize CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- educate icon CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/educate-custon-icon.css">
+    <!-- mCustomScrollbar CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- style CSS
+            ============================================ -->
+
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- responsive CSS
+            ============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+            ============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- zrh模板 引用的 -->
+    <link href="styles/common.css" rel="stylesheet">
+    <script src="scripts/Plugin/jquery-3.3.1.min.js"></script>
+    <script src="scripts/Plugin/echarts.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/Plugin/laydate/laydate.js"></script>
+
+
+</head>
+<body style="color: white">
+<!--start 左边菜单栏  -->
+<div class="left-sidebar-pro" >
+    <nav id="sidebar" class="">
+        <!--左边的公司logo -->
+        <div class="sidebar-header">
+            <a href="index.html"><img class="main-logo" src="img/logo/combini-small.JPG" alt="" /></a>
+        </div>
+
+        <div class="left-custom-menu-adp-wrap comment-scrollbar">
+            <nav class="sidebar-nav left-sidebar-menu-pro">
+                <!-- 整个左边菜单栏，四个层级，工厂、车间、产线、工位 -->
+                <ul class="metismenu" id="menu1">
+                    <!-- 套娃 -->
+                    <li class="active ">
+                        <!--这个active是不隐藏底下的子栏目，默认是隐藏的-->
+                        <a class="has-arrow" href="companyKPI.html" >
+                            <span class="educate-icon educate-home icon-wrap"></span>
+                            <span class="icon-wrap" id="company-jump">企业KPI</span>
+                            <!-- <span class="mini-click-non fa fa-home fa-4x">&nbsp智能KPI</span> -->
+                        </a>
+                        <ul class="submenu-angle" aria-expanded="true">
+                            <li class="active">
+                                <a title="工厂1" class="has-arrow" href="index-factory.html">
+                                        <span class="mini-sub-pro fa fa-industry fa-3x"
+                                              id="factory-jump1">&nbsp&nbsp工厂1</span>
+                                </a>
+                                <ul>
+                                    <li class="active">
+                                        <a title="车间1" class="has-arrow" href="index-workshop.html">&nbsp&nbsp<span
+                                                class="mini-sub-pro fa fa-indent fa-2x"
+                                                id="workshop-jump1-1">&nbsp&nbsp车间1</span></a>
+                                        <ul>
+                                            <li class="active">
+                                                <a title="产线1" class="has-arrow"
+                                                   href="index-line.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart"
+                                                        id="line-jump1-1-1">&nbsp&nbsp产线1</span></a>
+                                                <ul>
+                                                    <li><a href="index-workstation.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-1-1-1">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-1-1-2">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a title="产线2" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart"
+                                                        id="line-jump1-1-2">&nbsp&nbsp产线2</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-1-2-1">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-1-2-2">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="active">
+                                        <a title="车间2" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                class="mini-sub-pro fa fa-indent fa-2x"
+                                                id="workshop-jump1-2">&nbsp&nbsp车间2</span></a>
+                                        <ul>
+                                            <li class="active">
+                                                <a title="产线1" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart"
+                                                        id="line-jump1-2-1">&nbsp&nbsp产线1</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-2-1-1">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-2-1-2">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a title="产线2" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart"
+                                                        id="line-jump1-2-2">&nbsp&nbsp产线2</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-2-2-1">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male"
+                                                            id="workstation-jump1-2-2-2">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <a title="工厂2" class="has-arrow" href="index.html">
+                                    <span class="mini-sub-pro fa fa-industry fa-3x">&nbsp&nbsp工厂2</span>
+                                </a>
+                                <ul>
+                                    <li class="active">
+                                        <a title="车间1" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                class="mini-sub-pro fa fa-indent fa-2x">&nbsp&nbsp车间1</span></a>
+                                        <ul>
+                                            <li class="active">
+                                                <a title="产线1" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线1</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a title="产线2" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线2</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="active">
+                                        <a title="车间2" class="has-arrow" href="index.html">&nbsp&nbsp<span
+                                                class="mini-sub-pro fa fa-indent fa-2x">&nbsp&nbsp车间2</span></a>
+                                        <ul>
+                                            <li class="active">
+                                                <a title="产线1" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线1</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a title="产线2" class="has-arrow"
+                                                   href="index.html">&nbsp&nbsp&nbsp&nbsp<span
+                                                        class="mini-sub-pro fa fa-line-chart">&nbsp&nbsp产线2</span></a>
+                                                <ul>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位1</span></a>
+                                                    </li>
+                                                    <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span
+                                                            class="mini-sub-pro fa fa-male">&nbsp&nbsp工位2</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+</div>
+<!-- End 左边菜单栏 -->
+
+<!-- start 右边部分 -->
+<div class="all-content-wrapper">
+    <!-- 第一大行 系统名称 -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="div_any_child_systemname">
+                    <div class="div_any_title_systemname">智能KPI管理系统</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 系统名称结束 -->
+
+    <!-- start 第二行 人员、设备、过程、质量、物流等菜单栏 -->
+    <div class="header-advance-area">
+        <div class="header-top-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="header-top-wraper">
+                            <div class="row">
+                                <!-- 隐藏侧边栏 -->
+                                <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                    <div class="menu-switcher-pro">
+                                        <button type="button" id="sidebarCollapse"
+                                                class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                            <i class="educate-icon  educate-nav"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 col-md-12 col-sm-8 col-xs-12">
+                                    <div class="header-top-menu tabl-d-n">
+                                        <ul class="nav" role="tablist" style="display: inline-block">
+                                            <li role="presentation"><a href="#home" aria-controls="home" role="tab"
+                                                                       data-toggle="tab">总览</a></li>
+                                            <li role="presentation"><a href="#person" aria-controls="profile"
+                                                                       role="tab" data-toggle="tab">人员KPI</a></li>
+                                            <li role="presentation"><a href="#equipment" aria-controls="messages"
+                                                                       role="tab" data-toggle="tab">设备KPI</a></li>
+                                            <li role="presentation"><a href="#process" aria-controls="settings"
+                                                                       role="tab" data-toggle="tab">过程KPI</a></li>
+                                            <li role="presentation"><a href="#quality" aria-controls="settings"
+                                                                       role="tab" data-toggle="tab">质量KPI</a></li>
+                                            <li role="presentation"><a href="#logistics" aria-controls="settings"
+                                                                       role="tab" data-toggle="tab">物流KPI</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                    <div class="menu-switcher-pro">
+                                        <button type="button" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                            <i onclick="to(this)" class="fa fa-support" >&nbspKPI优化支持</i>
+                                        </button>
+                                        <!-- <span>A3报告导出</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end 第二行 人员、设备、过程、质量、物流等菜单栏 -->
+
+
+
+    <!-- 展示数据的区域 分三块 -->
+    <div class="datashow-area">
+        <div class="tab-content">
+            <!--KPI优化-->
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <!-- 展示数据的区域 分三块 -->
+                <div class="datashow-area">
+                    <div class="container-fluid">
+                        <div id="print">
+                            <div class="row">
+                                <!-- 第一列 -->
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                    <div class="div_any_child div_height" style="height: 400px;">
+                                        <!--<div class="div_any_title any_title_width"><img src="images/title_0.png">1 </div>-->
+                                        <div  style="width:100%;height:100%;display: inline-block;padding-left:1.25%;padding-right:1.25%;padding-top:1.5%;)">
+                                            <div class="form" style="height: 60px;text-align: center">
+                                                <form>
+                                                    <input type="hidden" name="action" value="login" />
+                                                    <label style="color: aqua">关键字搜索：</label>
+                                                    <input class="itxt" type="text" placeholder="请输入关键字"/>
+                                                    <input type="submit" style="color: black" value="搜索">
+                                                </form>
+                                            </div>
+                                            <div class="wrapper wrapper-content animated fadeInRight">
+                                                <div class="ibox float-e-margins">
+                                                    <div class="ibox-content">
+                                                        <div style="height: 30px">
+<!--                                                            <button class="btn btn-primary btn-add" type="button">-->
+<!--                                                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;新增专项</button>-->
+                                                            <button class="btn btn-info btn-upd" type="button"><i class="fa fa-paste"></i> 查看详情</button>
+<!--                                                            <button class="btn btn-success btn-del" type="button">-->
+<!--                                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;删除-->
+<!--                                                            </button>-->
+<!--                                                            <button class="btn btn-warning btn-stop" type="button"><i class="fa fa-warning"></i> <span class="bold">专项结束</span>-->
+<!--                                                            </button>-->
+                                                        </div>
+                                                        <table id="tb_users" style="color: aqua"></table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 模态框（Modal）-->
+                                            <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="demoModalLabel" aria-hidden="true" data-backdrop="static" style="color:black;">
+                                                <div class="modal-dialog" style="width: 700px;">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onClick="cancer()">&times;</button>
+                                                            <h5 class="modal-title" id="modalAddorEditTitle">新增专项</h5>
+                                                        </div>
+                                                        <div class="modal-body" style="background-color: white;">
+                                                            <div class="ibox-content">
+                                                                <form class="form-horizontal m-t" id="myForm">
+                                                                    <input name="zxUuid" type="text" hidden>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-3 control-label">编号：</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input name="zxCode" class="form-control" type="text" disabled="disabled" style="vertical-align: middle">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-3 control-label">责任人：</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input id="zxName" name="zxName" class="form-control" type="text" aria-required="true" aria-invalid="false" class="valid" disabled="disabled">
+<!--                                                                            <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 注意：必填项，且数字字母下划线不超过32位</span>-->
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-3 control-label">开始时间：</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control layer-date" name="startTime" placeholder="YYYY-MM-DD" disabled="disabled" onclick="laydate({istime: false, format: 'YYYY-MM-DD'})">
+                                                                            <label class="laydate-icon"></label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-3 control-label">结束时间：<span
+                                                                                style="color: red"></span></label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control layer-date" name="endTime" placeholder="YYYY-MM-DD" disabled="disabled" onclick="laydate({istime: false, format: 'YYYY-MM-DD'})">
+                                                                            <label class="laydate-icon"></label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-3 control-label">层级：</label>
+                                                                        <div class="col-sm-6">
+                                                                            <select class="form-control zxRange" name="zxRange" disabled="disabled">
+                                                                                <option value="1">工厂级</option>
+                                                                                <option value="2">车间级</option>
+                                                                                <option value="3">产线级</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-3 control-label">KPI类型：</label>
+                                                                        <div class="col-sm-6">
+                                                                            <select class="form-control zxType" name="zxType" disabled="disabled">
+                                                                                <option value="1">人员KPI</option>
+                                                                                <option value="2">设备KPI</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-3 control-label">问题：</label>
+                                                                        <div class="col-sm-6">
+                                                                            <textarea id="key1" name="key1" class="form-control" type="text" aria-required="true" aria-invalid="false" class="valid" disabled="disabled"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-3 control-label">内容：</label>
+                                                                        <div class="col-sm-6">
+                                                                            <textarea id="key2" name="key2" class="form-control" type="text" aria-required="true" aria-invalid="false" class="valid" disabled="disabled"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-3 control-label">措施：</label>
+                                                                        <div class="col-sm-6">
+                                                                            <textarea id="key3" name="key3" class="form-control" type="text" aria-required="true" aria-invalid="false" class="valid" disabled="disabled"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-primary" onclick="addOrEdit()">确定</button>
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="cancer()">取消</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 模态框（Modal）end-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 第二列 -->
+
+                                <div   align="center" style="color: white">
+                                    <form id="indicatorForm" action="" method="get" style="margin-top: 4%">
+                                        <select class="btn btn-primary dropdown-toggle"  name="rank" id="rank" aria-haspopup="true" aria-expanded="false">
+                                            <option value="1" >请选择层级</option>
+                                            <option value="工厂">工厂级</option>
+                                            <option value="车间">车间级</option>
+                                            <option value="产线">产线级</option>
+                                            <option value="工位">工位级</option>
+                                        </select>
+                                        <select class="btn btn-primary dropdown-toggle" name="kind" id="kind" aria-haspopup="true" aria-expanded="false">
+                                            <option value="" selected>请选择KPI类型</option>
+                                            <option value="人员">人员KPI</option>
+                                            <option value="设备">设备KPI</option>
+                                            <option value="过程">过程KPI</option>
+                                            <option value="质量">质量KPI</option>
+                                            <option value="物流">物流KPI</option>
+                                            <option value="企业">企业KPI</option>
+                                        </select>
+
+                                        <!--                动态显示的指标-->
+                                        <select class="btn btn-primary dropdown-toggle" name="indicator" id="indicator" aria-haspopup="true" aria-expanded="false">
+                                            <option value="" selected>请选择指标</option>
+                                            <option value="销售收入">销售收入</option>
+                                            <option value="OEE">OEE</option>
+                                            <option value="产量">产量</option>
+                                            <option value="财务状况">财务状况</option>
+                                        </select>
+                                    </form>
+
+                                </div>
+
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6" style="margin-top: 60px">
+                                    <div class="div_any_child" style="height: 210px;text-align: center;line-height: 190px;background:#4b8df8;">
+                                        <button type="submit" style="font-size: 40px;color: #e2e221;background: #4b8df8"
+                                                form="indicatorForm" formaction="PDCA.html">戴明环<br>PDCA</button>
+                                    </div>
+                                    <div class="div_any_child" style="height: 210px;text-align: center;line-height: 190px;background:#4b8df8">
+                                        <button type="submit" style="font-size: 40px;color: #e2e221;background: #4b8df8"
+                                                form="indicatorForm" formaction="printA3.html">A3报表<br>分析法</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6" style="margin-top: 60px">
+                                    <div class="div_any_child" style="height: 210px;text-align: center;line-height: 190px;background:#4b8df8">
+                                        <button type="submit" style="font-size: 40px;color: #e2e221;background: #4b8df8"
+                                                form="indicatorForm" formaction="5w2h.html">七何分析法<br>5W2H法</button>
+                                    </div>
+                                    <div class="div_any_child" style="height: 210px;text-align: center;line-height: 190px;background:#4b8df8">
+                                        <button type="submit" style="font-size: 40px;color: #e2e221;background: #4b8df8"
+                                                form="indicatorForm" formaction="fish.html">鱼骨图<br>要因分析图</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/core/common/jquery.min.js?v=2.1.4"></script>
+<script src="js/core/common/bootstrap.min.js?v=3.3.5"></script>
+<script src="js/plugins/layer/layer/layer.js"></script>
+<script src="js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+<script src="js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="js/plugins/layer/laydate/laydate.js"></script>
+<script src="js/static/jquery.cookie.js"></script>
+<script src="js/static/common.js"></script>
+<script src="js/core/common/jquery.form.js"></script>
+<script src="js/core/common/collection.js"></script>
+<script src="js/core/common/util.js"></script>
+<script src="js/core/common/zeus.js"></script>
+<script src="js/static/specialManagement/specialManagement.js"></script>
+</body>
+</html>

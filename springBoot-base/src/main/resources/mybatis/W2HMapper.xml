@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.backstage.base.mapper.W2HMapper">
+    <insert id="addw2h" parameterType="W2H">
+        insert into O_C_5W2H (WHY,WHER,WHAT,WHE,WHO,HOW,HOWMU) values(#{WHY},#{WHER},#{WHAT},#{WHE},#{WHO},#{HOW},#{HOWMU})
+    </insert>
+</mapper>
